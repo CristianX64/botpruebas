@@ -41,10 +41,11 @@ cytoolz==0.9.0.1
 dask==0.17.5
 datashape==0.5.4
 decorator==4.3.0
-distributed==1.21.8
+distributed==0.6.28
 docutils==0.14
 entrypoints==0.2.3
 enum34==1.1.6
+setuptools == 1.0
 et-xmlfile==1.0.1
 fake-useragent==0.1.11
 fastcache==1.0.2
