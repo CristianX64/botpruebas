@@ -23,7 +23,21 @@ def main():
 
     # https://api.telegram.org/bot786480492:AAHLglxPVMq-UUiI8z27swjr1hLZo4pHsn0/sendMessage?chat_id=-1001160355548&text=Soy%20el%20bot%20que%20va%20a%20dar%20Karma%20a%20los%20chicos%20buenos
 
-
+AYUDA = 'Puedes utilizar los siguientes comandos : \n\n/ayuda - Guia para utilizar el bot. \n/info - Informacion De interes \n/hola - Saludo del Bot \n/piensa3D - Informacion sobre Piensa3D \n\n'
+ 
+ 
+ 
+@bot.message_handler(commands=['ayuda']) # Indicamos que lo siguiente va a controlar el comando '/ayuda'
+ 
+def command_ayuda(m): # Definimos una función que resuleva lo que necesitemos.
+ 
+    cid = m.chat.id # Guardamos el ID de la conversación para poder responder.
+ 
+    bot.send_chat_action(cid, 'typing') # Enviando ...
+ 
+    time.sleep(1) #La respuesta del bot tarda 1 segundo en ejecutarse
+ 
+    bot.send_message( cid, AYUDA) # Con la función 'send_message()' del bot, enviamos al ID almacenado el texto que queremos.
 
 
 if __name__ == '__main__':
